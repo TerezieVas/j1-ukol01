@@ -52,6 +52,27 @@ public class HlavniProgram {
 
   }
 
+  public void nakresliOsmihran() {
+    zofka.turnLeft(90);
+    for (int i=0; i<8; i++) {
+      zofka.move(46);
+      zofka.turnLeft(45);
+    }
+    zofka.turnRight(45);
+  }
+
+  public void nakresliKolecko() {
+    zofka.turnLeft(90);
+    for (int i=0; i<16; i++) {
+      zofka.move(23);
+      zofka.turnLeft(23);
+    }
+    zofka.turnRight(20);
+  }
+
+
+
+
 
   public void start()
   {
@@ -59,6 +80,22 @@ public class HlavniProgram {
 
     //TODO implementace domácího úkolu
     nakresliPrasatko();
+
+    zofka.penUp();
+    zofka.move(200);
+    zofka.turnLeft(90);
+    zofka.move(200);
+    zofka.turnRight(90);
+    zofka.penDown();
+    nakresliOsmihran();
+
+    zofka.turnLeft(45);// přesun od osmiúhelníku ke kolečku
+    zofka.penUp();
+    zofka.move(150);
+    zofka.turnRight(90);
+zofka.penDown();
+    nakresliKolecko();//nakreslené kolečko
+
   }
 
 
