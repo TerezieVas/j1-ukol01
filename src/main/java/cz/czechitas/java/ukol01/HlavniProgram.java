@@ -67,8 +67,26 @@ public class HlavniProgram {
       zofka.move(23);
       zofka.turnLeft(23);
     }
-    zofka.turnRight(20);
+    zofka.turnRight(100);
   }
+
+  public void nakresliSlunicko() {
+    zofka.turnLeft(90);
+    for (int i=0; i<16; i++) {
+      zofka.move(12);
+      zofka.turnRight(90);
+      zofka.move(20);
+      zofka.turnRight(180);
+      zofka.move(20);//paprsek
+      zofka.turnRight(90);//dokončení úhlu
+
+      zofka.move(12);
+      zofka.turnLeft(23);//úhel bez paprsku
+    }
+    zofka.turnRight(100);
+  }
+
+
 
 
 
@@ -95,6 +113,14 @@ public class HlavniProgram {
     zofka.turnRight(90);
 zofka.penDown();
     nakresliKolecko();//nakreslené kolečko
+    zofka.penUp();
+    zofka.turnLeft(90);
+    zofka.move(150);
+    zofka.penDown();
+    zofka.turnRight(90);
+    nakresliSlunicko();
+
+
 
   }
 
