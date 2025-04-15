@@ -196,7 +196,7 @@ zofka.turnRight(90);
     zofka = new Turtle();
 
     //TODO implementace domácího úkolu
-   /*
+
     zofka.penUp();
     zofka.turnLeft(90);
     zofka.move(300);
@@ -246,7 +246,14 @@ zofka.turnRight(90);
     zofka.turnRight(90);
     zofka.penDown();
     nakresliDomecek();
-*/
+zofka.penUp();
+
+    zofka.turnLeft(90);
+    zofka.move(75);
+    zofka.turnLeft(90);
+    zofka.move(220);
+    zofka.turnLeft(180);
+
 
     nakresliT();
     nakresliE();
